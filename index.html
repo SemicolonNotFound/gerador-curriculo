@@ -3,12 +3,213 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gerador de Currículos</title>
 </head>
 
 <body>
+    <header>
+        <h1>Gerador de Currículos</h1>
+        <p>Crie um currículo bonito e estiloso agora mesmo, seguindo todas as normas de criação
+            de currículos.
+        </p>
+    </header>
+    <main>
+        <form method="POST" action="">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div>
+                    <label>Nome Completo:</label>
+                    <input type="text" name="nome-completo" required minlength="6" maxlength="100" />
+                </div>
+                <div>
+                    <label>Idade:</label>
+                    <input type="number" name="idade" required min="13">
+                </div>
+                <div>
+                    <label>Estado Civil</label>
+                    <select name="estado-civil">
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="separado">Separado(a)</option>
+                        <option value="uniao-estavel">União Estável</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Nacionalidade:</label>
+                    <select name="nacionalidade">
+                        <option value="brasileiro">Brasileiro</option>
+                        <option value="brasileira">Brasileira</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações de Contato</legend>
+                <div>
+                    <label>Endereço:</label>
+                    <input name="endereco" type="text" maxlength="125"
+                        placeholder="Rua Pernambuco, 2907. Fundos. Casa 3.">
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input name="telefone" type="tel" placeholder="45 99999-8888">
+                </div>
+                <div>
+                    <label>Cidade:</label>
+                    <input name="cidade" type="text" maxlength="50">
+                    <label>Estado:</label>
+                    <select name="estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" maxlength="250">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Formação Acadêmica</legend>
+                <label>Considerar?</label>
+                <input type="checkbox" name="considerar-formacao-academica">
+                <label>Sim</label>
+                <div>
+                    <label>Insituição de Ensino:</label>
+                    <input name="instituicao-ensino" type="text"
+                        placeholder="Ex: Pontíficia Universidade Católica do Paraná">
+                </div>
+                <div>
+                    <label>Curso:</label>
+                    <input type="text" maxlength="50">
+                    <label>Situação:</label>
+                    <select name="situacao-curso">
+                        <option value="concluido">Concluído</option>
+                        <option value="trancado">Trancado</option>
+                        <option value="cursando">Cursando</option>
+                        <option value="nao-concluido">Não concluído</option>
+                    </select>
+                </div>
+            </fieldset>
+
+
+
+
+
+
+
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" name="nome" />
+                </div>
+
+                <div>
+                    <label>Telefone:</label>
+                    <input type="tel" placeholder="(99) 99999-9999" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+                        name="telefone" />
+                </div>
+
+                <div>
+                    <label>Sexo:</label>
+                    <input type="radio" value="Masculino" name="sexo" checked />
+                    <label>Masculino</label>
+                    <input type="radio" value="Feminino" name="sexo" />
+                    <label>Feminino</label>
+
+                </div>
+
+                <div>
+                    <label>Data:</label>
+                    <input type="date" name="data" />
+                </div>
+
+                <div>
+                    <label>Foto de perfil</label>
+                    <input type="file" accept="image/*" name="foto" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <div>
+                    <label>Rua:</label>
+                    <input type="text" name="rua" />
+                </div>
+
+                <div>
+                    <label>Complemento:</label>
+                    <input type="text" name="complemento" />
+                </div>
+
+                <div>
+                    <label>Número:</label>
+                    <input type="number" minlength="1" maxlength="4" name="numero" />
+                </div>
+
+                <div>
+                    <label>Cidade:</label>
+                    <input type="text" name="cidade" />
+                </div>
+
+                <div>
+                    <label>Estado:</label>
+                    <select name="estado">
+                        <option value="pr">Paraná</option>
+                        <option value="sp">São Paulo</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mais</legend>
+                <div>
+                    <label>Como conheceu a Hello Pizza?</label>
+                    <textarea maxlength="255" placeholder="Indique como conheceu o Hello Pizza"
+                        name="como_conheceu_hello_pizza"></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" checked name="email_marketing" />
+                    <label>Deseja receber ofertas por e-mail?</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Enviar" />
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
 
 </body>
 
