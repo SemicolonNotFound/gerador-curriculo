@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gerador de Currículos</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
@@ -14,156 +15,206 @@
         </p>
     </header>
     <main>
-        <form method="POST" action="">
-            <fieldset>
-                <legend>Informações Pessoais</legend>
-                <div>
-                    <label>Nome Completo:</label>
-                    <input type="text" name="nome-completo" required minlength="6" maxlength="100" />
-                </div>
-                <div>
-                    <label>Idade:</label>
-                    <input type="number" name="idade" required min="13">
-                </div>
-                <div>
-                    <label>Estado Civil</label>
-                    <select name="estado-civil">
-                        <option value="solteiro">Solteiro(a)</option>
-                        <option value="casado">Casado(a)</option>
-                        <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo">Viúvo(a)</option>
-                        <option value="separado">Separado(a)</option>
-                        <option value="uniao-estavel">União Estável</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Nacionalidade:</label>
-                    <select name="nacionalidade">
-                        <option value="brasileiro">Brasileiro</option>
-                        <option value="brasileira">Brasileira</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Informações de Contato</legend>
-                <div>
-                    <label>Endereço:</label>
-                    <input name="endereco" type="text" maxlength="125"
-                        placeholder="Rua Pernambuco, 2907. Fundos. Casa 3.">
-                </div>
-                <div>
-                    <label>Telefone</label>
-                    <input name="telefone" type="tel" placeholder="45 99999-8888">
-                </div>
-                <div>
-                    <label>Cidade:</label>
-                    <input name="cidade" type="text" maxlength="50">
-                    <label>Estado:</label>
-                    <select name="estado">
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" maxlength="250">
-                </div>
-                <div>
-                    <label>Perfil do Linkedin:</label>
-                    <input type="text" maxlength="250">
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Objetivo Profissional</legend>
-                <div>
-                    <label>Qual seu objetivo profissional, descreva abaixo</label>
-                    <br />
-                    <textarea name="objetivo-profissional" cols="50" rows="3"></textarea>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Formação Acadêmica</legend>
-                <label>Considerar?</label>
-                <input type="checkbox" name="considerar-formacao-academica">
-                <label>Sim</label>
-                <div>
-                    <label>Insituição de Ensino:</label>
-                    <input name="instituicao-ensino" type="text"
-                        placeholder="Ex: Pontíficia Universidade Católica do Paraná">
-                </div>
-                <div>
-                    <label>Curso:</label>
-                    <input type="text" maxlength="50">
-                    <label>Situação:</label>
-                    <select name="situacao-curso">
-                        <option value="concluido">Concluído</option>
-                        <option value="trancado">Trancado</option>
-                        <option value="cursando">Cursando</option>
-                        <option value="nao-concluido">Não concluído</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Experiência Profissional</legend>
-                <div>
-                    <label>Empresa:</label>
-                    <input name="empresa" type="text" />
-                </div>
-                <div>
-                    <label>Cargo:</label>
-                    <input name="cargo" type="text" />
-                </div>
-                <div>
-                    <label>Entrada</label>
-                    <input type="month" name="empresa-entrada" placeholder="Mês">
-                    <label>Saída</label>
-                    <input type="month" name="empresa-saida">
-                </div>
-                <div>
-                    <label>Descreva as principais atividades desempenhadas no cargo:</label>
-                    <br />
-                    <textarea name="principais-atividades" cols="50" rows="4"></textarea>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Informações adicionais</legend>
-                <div>
-                    <label>Adicione aqui informações que sejam importantes mencionar:</label>
-                    <br />
-                    <textarea name="info-adicional" cols="50" rows="6"
-                        placeholder="Inglês básico, conhecimentos em Power Point e Excel."></textarea>
-                </div>
-            </fieldset>
-            <input type="submit" value="Enviar" />
+        <form class="contact-form" method="POST" action="">
+            <span class="contact-form-title">
+                Informações Pessoais
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Nome Completo</label>
+                <input class="input" type="text" name="nome-completo" placeholder="Informe seu nome">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Idade</label>
+                <input class="input" type="number" name="idade" placeholder="Informe sua idade" min="13">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Estado Civil</label>
+                <select name="estado-civil">
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                    <option value="separado">Separado(a)</option>
+                    <option value="uniao-estavel">União Estável</option>
+                </select>
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Nacionalidade</label>
+                <select name="nacionalidade">
+                    <option value="brasileiro">Brasileiro</option>
+                    <option value="brasileira">Brasileira</option>
+                </select>
+            </div>
+            <span class="contact-form-title">
+                Informações de Contato
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Endereço</label>
+                <input class="input" name="endereco" type="text" maxlength="125"
+                    placeholder="Avenidade Brasil, 0001. Apt 666.">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Telefone</label>
+                <input class="input" name="telefone" type="tel" placeholder="(45) 99999-8888">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Cidade</label>
+                <input class="input" name="cidade" type="text" maxlength="50">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Estado</label>
+                <select name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </div>
+            <div class="wrap-input bg-white rs1-wrap-input">
+                <label class="label-input">Email</label>
+                <input class="input" type="email" maxlength="250">
+            </div>
+            <div class="wrap-input bg-white rs1-wrap-input">
+                <label class="label-input">Perfil do Linkedin</label>
+                <input class="input" type="text" maxlength="250">
+            </div>
+            <span class="contact-form-title">
+                Objetivo Profissional
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Descreva seu objetivo profissional abaixo</label>
+                <textarea class="input" name=" objetivo-profissional" cols="50" rows="3"
+                    placeholder="Escreva aqui..."></textarea>
+            </div>
+            <span class="contact-form-title">
+                Formação Acadêmica
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Insituição de Ensino</label>
+                <input class="input" name="instituicao-ensino" type="text"
+                    placeholder="Ex: Pontíficia Universidade Católica do Paraná">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Curso:</label>
+                <input class="input" type="text" maxlength="50">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Início</label>
+                <select name="inicio-curso">
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Conclusão</label>
+                <select name="conclusao-curso">
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <span class="contact-form-title">
+                Experiência Profissional
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Empresa</label>
+                <input class="input" name="empresa" type="text" />
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Cargo</label>
+                <input class="input" name="cargo" type="text" />
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Entrada</label>
+                <input class="input" type="month" name="empresa-entrada" placeholder="Mês">
+            </div>
+            <div class="wrap-input bg-white rs2-wrap-input">
+                <label class="label-input">Saída</label>
+                <input class="input" type="month" name="empresa-saida">
+            </div>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Descreva as principais atividades desempenhadas no cargo</label>
+                <textarea class="input" name="principais-atividades" cols="50" rows="4"
+                    placeholder="Escreva aqui..."></textarea>
+            </div>
+            <span class="contact-form-title">
+                Informações adicionais
+            </span>
+            <div class="wrap-input bg-white">
+                <label class="label-input">Adicione aqui informações que sejam importantes mencionar</label>
+                <textarea class="input" name="info-adicional" cols="50" rows="6"
+                    placeholder="Inglês básico, conhecimentos em Power Point e Excel."></textarea>
+            </div>
+            <div class="container-contact-form-btn">
+                <button class="contact-form-btn" value="Gerar Currículo">Gerar Currículo</button>
+            </div>
         </form>
     </main>
     <footer>
+        <div id="copyright">
+            <p>Todos os direitos reservados &copy; 2019</p>
+        </div>
     </footer>
 </body>
 
