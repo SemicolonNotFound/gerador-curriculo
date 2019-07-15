@@ -1,7 +1,5 @@
 <?php
 
-$curriculoPronto = '';
-
 if ($_POST) {
     $nomeCompleto = $_POST['nome_completo'];
     $idade = $_POST['idade'];
@@ -25,27 +23,11 @@ if ($_POST) {
     $principaisAtividades = $_POST['principais_atividades'];
     $infoAdicional = $_POST['info_adicional'];
 
-    // $curriculoPronto .= $nomeCompleto;
-    // $curriculoPronto .= $idade;
-    // $curriculoPronto .= $estadoCivil;
-    // $curriculoPronto .= $nacionalidade;
-    // $curriculoPronto .= $endereco;
-    // $curriculoPronto .= $telefone;
-    // $curriculoPronto .= $cidade;
-    // $curriculoPronto .= $estado;
-    // $curriculoPronto .= $email;
-    // $curriculoPronto .= $linkedin;
-    // $curriculoPronto .= $objetivo;
-    // $curriculoPronto .= $instituicaoEnsino;
-    // $curriculoPronto .= $curso;
-    // $curriculoPronto .= $inicioCurso;
-    // $curriculoPronto .= $conclusaoCurso;
-    // $curriculoPronto .= $empresa;
-    // $curriculoPronto .= $cargo;
-    // $curriculoPronto .= $empresaEntrada;
-    // $curriculoPronto .= $empresaSaida;
-    // $curriculoPronto .= $principaisAtividades;
-    // $curriculoPronto .= $infoAdicional;
+    $objetivoFormatado = wordwrap($objetivo, 75, "<br />\n");
+    $principaisAtividadesFormatado = wordwrap($objetivo, 75, "<br />\n");
+    $infoAdicionalFormatado = wordwrap($objetivo, 75, "<br />\n");
+} else {
+    echo "Preencha o formulário corretamente";
 }
 ?>
 
@@ -56,6 +38,7 @@ if ($_POST) {
     <meta charset="utf-8">
     <title>Currículo Pronto</title>
     <link rel="stylesheet" href="../css/curriculo.css">
+    <script src="../js/app.js"></script>
 </head>
 
 <body>
@@ -63,9 +46,9 @@ if ($_POST) {
         <div>
             <h1><?php echo $nomeCompleto ?></h1>
         </div>
-        <p>
+        <div>
             <p><?php echo $nacionalidade . ', ' . $estadoCivil . ', ' . $idade . ' anos.' ?></p>
-        </p>
+        </div>
         <div>
             <p><?php echo $endereco . '. ' . $cidade . ' - ' . $estado ?></p>
         </div>
@@ -75,35 +58,31 @@ if ($_POST) {
         <div>
             <p><?php echo 'E-mail: ' .  $email ?></p>
         </div>
-        <br />
+        <br>
         <div>
             <h2>Objetivo Profissional</h2>
-            <hr />
-            <br />
-            <p><?php echo $objetivo ?></p>
+            <p><?php echo $objetivoFormatado ?></p>
             <br />
         </div>
         <div>
             <h2>Formação Acadêmica</h2>
-            <hr />
-            <br />
-            <p><?php echo 'Graduação em ' . $curso . ' - ' . $instituicaoEnsino . $inicioCurso . ' - ' . $conclusaoCurso ?></p>
+            <p><?php echo $instituicaoEnsino . ' - (' . $inicioCurso . ' - ' . $conclusaoCurso . ')' ?></p>
+            <p><?php echo 'Graduação em ' . $curso ?></p>
             <br />
         </div>
         <div>
             <h2>Experiência Profissional</h2>
-            <hr />
-            <br />
-            <p><?php echo $empresa . ' - ' . $cargo . ' (' . $empresaEntrada . '/' . $empresaSaida . ')' ?></p>
-            <p><?php echo $principaisAtividades ?></p>
+            <p><?php echo $empresa . ' - ' . $cargo . ' (' . $empresaEntrada . '-' . $empresaSaida . ')' ?></p>
+            <p><?php echo $principaisAtividadesFormatado ?></p>
             <br />
         </div>
         <div>
             <h2>Informações Adicionais</h2>
-            <hr />
-            <br />
-            <p><?php echo $infoAdicional ?></p>
+            <p><?php echo $infoAdicionalFormatado ?></p>
         </div>
+        <br>
+        <?php echo  "<script src='../js/app.js'></script>\n"; ?>
+        <button id="btn-imprimir" class="button" onclick="imprimir()">Imprimir Currículo</button>
     </main>
 </body>
 
