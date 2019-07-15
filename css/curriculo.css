@@ -1,0 +1,29 @@
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 1px;
+}
+
+hr {
+    box-sizing: border-box;
+    width: 40%;
+    float: left;
+}
+
+br {
+    margin: 10px;
+    padding: 10px;
+}

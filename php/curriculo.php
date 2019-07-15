@@ -25,27 +25,27 @@ if ($_POST) {
     $principaisAtividades = $_POST['principais_atividades'];
     $infoAdicional = $_POST['info_adicional'];
 
-    $curriculoPronto .= $nomeCompleto;
-    $curriculoPronto .= $idade;
-    $curriculoPronto .= $estadoCivil;
-    $curriculoPronto .= $nacionalidade;
-    $curriculoPronto .= $endereco;
-    $curriculoPronto .= $telefone;
-    $curriculoPronto .= $cidade;
-    $curriculoPronto .= $estado;
-    $curriculoPronto .= $email;
-    $curriculoPronto .= $linkedin;
-    $curriculoPronto .= $objetivo;
-    $curriculoPronto .= $instituicaoEnsino;
-    $curriculoPronto .= $curso;
-    $curriculoPronto .= $inicioCurso;
-    $curriculoPronto .= $conclusaoCurso;
-    $curriculoPronto .= $empresa;
-    $curriculoPronto .= $cargo;
-    $curriculoPronto .= $empresaEntrada;
-    $curriculoPronto .= $empresaSaida;
-    $curriculoPronto .= $principaisAtividades;
-    $curriculoPronto .= $infoAdicional;
+    // $curriculoPronto .= $nomeCompleto;
+    // $curriculoPronto .= $idade;
+    // $curriculoPronto .= $estadoCivil;
+    // $curriculoPronto .= $nacionalidade;
+    // $curriculoPronto .= $endereco;
+    // $curriculoPronto .= $telefone;
+    // $curriculoPronto .= $cidade;
+    // $curriculoPronto .= $estado;
+    // $curriculoPronto .= $email;
+    // $curriculoPronto .= $linkedin;
+    // $curriculoPronto .= $objetivo;
+    // $curriculoPronto .= $instituicaoEnsino;
+    // $curriculoPronto .= $curso;
+    // $curriculoPronto .= $inicioCurso;
+    // $curriculoPronto .= $conclusaoCurso;
+    // $curriculoPronto .= $empresa;
+    // $curriculoPronto .= $cargo;
+    // $curriculoPronto .= $empresaEntrada;
+    // $curriculoPronto .= $empresaSaida;
+    // $curriculoPronto .= $principaisAtividades;
+    // $curriculoPronto .= $infoAdicional;
 }
 ?>
 
@@ -54,34 +54,55 @@ if ($_POST) {
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Currículo Pronto</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="../css/curriculo.css">
 </head>
 
 <body>
     <main>
         <div>
-            <?php echo $nomeCompleto ?>
-            <?php echo $idade ?>
-            <?php echo $estadoCivil ?>
-            <?php echo $nacionalidade ?>
-            <?php echo $endereco ?>
-            <?php echo $telefone ?>
-            <?php echo $cidade ?>
-            <?php echo $estado ?>
-            <?php echo $email ?>
-            <?php echo $linkedin ?>
-            <?php echo $objetivo ?>
-            <?php echo $instituicaoEnsino ?>
-            <?php echo $curso ?>
-            <?php echo $inicioCurso ?>
-            <?php echo $conclusaoCurso ?>
-            <?php echo $empresa ?>
-            <?php echo $empresaEntrada ?>
-            <?php echo $empresaSaida ?>
-            <?php echo $principaisAtividades ?>
-            <?php echo $infoAdicional ?>
+            <h1><?php echo $nomeCompleto ?></h1>
+        </div>
+        <p>
+            <p><?php echo $nacionalidade . ', ' . $estadoCivil . ', ' . $idade . ' anos.' ?></p>
+        </p>
+        <div>
+            <p><?php echo $endereco . '. ' . $cidade . ' - ' . $estado ?></p>
+        </div>
+        <div>
+            <p><?php echo 'Telefone: ' .  $telefone . ' - Linkedin: ' .  $linkedin ?></p>
+        </div>
+        <div>
+            <p><?php echo 'E-mail: ' .  $email ?></p>
+        </div>
+        <br />
+        <div>
+            <h2>Objetivo Profissional</h2>
+            <hr />
+            <br />
+            <p><?php echo $objetivo ?></p>
+            <br />
+        </div>
+        <div>
+            <h2>Formação Acadêmica</h2>
+            <hr />
+            <br />
+            <p><?php echo 'Graduação em ' . $curso . ' - ' . $instituicaoEnsino . $inicioCurso . ' - ' . $conclusaoCurso ?></p>
+            <br />
+        </div>
+        <div>
+            <h2>Experiência Profissional</h2>
+            <hr />
+            <br />
+            <p><?php echo $empresa . ' - ' . $cargo . ' (' . $empresaEntrada . '/' . $empresaSaida . ')' ?></p>
+            <p><?php echo $principaisAtividades ?></p>
+            <br />
+        </div>
+        <div>
+            <h2>Informações Adicionais</h2>
+            <hr />
+            <br />
+            <p><?php echo $infoAdicional ?></p>
         </div>
     </main>
 </body>
