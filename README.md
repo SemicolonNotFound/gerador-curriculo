@@ -1,2 +1,2 @@
 # Gerador de Currículos
-Atividade reflexiva da faculdade
+Apenas uma atividade prática da Faculdade em HTML, CSS e PhP que eu decidi guardar aqui!
